@@ -189,3 +189,18 @@ var floatObj = function() {
     }
 }();
 
+/*4.
+ *  2D array transpose
+ *  @param array {Array} 2d array
+ *  usage: arrayTranspose([['1','2'],['4','5'],['7','8']])
+ *  result: [["1", "4", "7"],["2", "5", "8"]]
+ */
+
+function arrayTranspose(array){
+    return array[0].map(function (col, i) {
+      return array.map(function (row) {
+        return row[i]
+      })
+    })
+}
+
