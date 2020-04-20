@@ -204,3 +204,17 @@ function arrayTranspose(array){
     })
 }
 
+/*5.
+ *  DOM selector
+ *  @param selector {String} css selector for element
+ *  @param context {Element} root element
+ *  usage: $$('body')
+ *  result: You will get <body> element
+ */
+function $$(selector, context) {
+  context = context || document
+  var elements = context.querySelectorAll(selector)
+  return elements.length == 1
+    ? Array.prototype.slice.call(elements)[0]
+    : Array.prototype.slice.call(elements)
+}
